@@ -1,0 +1,132 @@
+<section class="about-hero">
+  <div class="container">
+    <h1 class="page-title" data-aos="fade-down">About Me</h1>
+  </div>
+</section>
+
+<section class="about-content" data-aos="fade-up">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="https://avatars.githubusercontent.com/u/136116172?s=400&u=c4daf28ae04c3fbe245f04d2eb448301c0c5b30d&v=4" alt="Naveen Udayagiri">
+      </div>
+      
+      <div class="about-text">
+        <h2>Hi, I'm Naveen Udayagiri</h2>
+        <p>I'm a software engineer and full stack developer with a passion for building innovative web applications that solve real-world problems.</p>
+        <p>With experience working in fast-paced environments, I specialize in creating scalable, responsive web applications using modern JavaScript frameworks and libraries.</p>
+        <p>My approach to development focuses on writing clean, maintainable code while ensuring optimal performance and user experience. I'm always eager to learn new technologies and methodologies to stay at the forefront of web development.</p>
+        
+        <div class="about-details">
+          <div class="detail-item">
+            <span class="label">Name:</span>
+            <span class="value">Naveen Udayagiri</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Email:</span>
+            <span class="value">naveen.udayagiriexample.com</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Location:</span>
+            <span class="value">Bangalore, India</span>
+          </div>
+          <div class="detail-item">
+            <span class="label">Experience:</span>
+            <span class="value">3+ Years</span>
+          </div>
+        </div>
+        
+        <div class="about-cta">
+          <a href="/assets/resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+          <a routerLink="/contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="skills-section" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title">My Skills</h2>
+    <div class="skills-container">
+      <div class="skill-item" *ngFor="let skill of skills">
+        <div class="skill-info">
+          <span class="skill-name">{{ skill.name }}</span>
+          <span class="skill-percentage">{{ skill.level }}%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-progress" [style.width.%]="skill.level"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="education-section" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    <div class="education-container">
+      <div class="education-item">
+        <div class="education-year">2017 - 2021</div>
+        <div class="education-content">
+          <h3>Bachelor of Technology in Computer Science</h3>
+          <p class="education-institution">Jawaharlal Nehru Technological University</p>
+          <p class="education-description">Studied core computer science subjects including data structures, algorithms, database management, and web development.</p>
+        </div>
+      </div>
+      
+      <div class="education-item">
+        <div class="education-year">2022</div>
+        <div class="education-content">
+          <h3>Full Stack Web Development Certification</h3>
+          <p class="education-institution">MicroDegree</p>
+          <p class="education-description">Completed an intensive program focused on modern web technologies including React, Node.js, and MongoDB.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="interests-section" data-aos="fade-up">
+  <div class="container">
+    <h2 class="section-title">Interests</h2>
+    <div class="interests-container">
+      <div class="interest-item">
+        <div class="interest-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3>Web Development</h3>
+      </div>
+      <div class="interest-item">
+        <div class="interest-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3>Mobile Apps</h3>
+      </div>
+      <div class="interest-item">
+        <div class="interest-icon">
+          <i class="fas fa-robot"></i>
+        </div>
+        <h3>AI & ML</h3>
+      </div>
+      <div class="interest-item">
+        <div class="interest-icon">
+          <i class="fas fa-book"></i>
+        </div>
+        <h3>Reading</h3>
+      </div>
+      <div class="interest-item">
+        <div class="interest-icon">
+          <i class="fas fa-music"></i>
+        </div>
+        <h3>Music</h3>
+      </div>
+      <div class="interest-item">
+        <div class="interest-icon">
+          <i class="fas fa-hiking"></i>
+        </div>
+        <h3>Hiking</h3>
+      </div>
+    </div>
+  </div>
+</section>

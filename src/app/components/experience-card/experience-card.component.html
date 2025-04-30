@@ -1,0 +1,26 @@
+<div class="experience-card" [ngClass]="position">
+  <div class="experience-content">
+    <div class="experience-header">
+      <h3 class="role">{{ role }}</h3>
+      <div class="company">{{ company }}</div>
+      <div class="duration">{{ duration }}</div>
+    </div>
+    <div class="experience-body">
+      <p>{{ description }}</p>
+      
+      <div class="achievements" *ngIf="achievements && achievements.length > 0">
+        <h4>Key Achievements:</h4>
+        <ul>
+          <li *ngFor="let achievement of achievements">{{ achievement }}</li>
+        </ul>
+      </div>
+      
+      <div class="technologies" *ngIf="technologies && technologies.length > 0">
+        <h4>Technologies:</h4>
+        <div class="tech-tags">
+          <span class="tech-tag" *ngFor="let tech of technologies">{{ tech }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

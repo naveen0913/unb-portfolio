@@ -1,0 +1,128 @@
+.experience-card {
+  position: relative;
+  margin-bottom: var(--spacing-5);
+  width: 45%;
+  
+  @media (max-width: 768px) {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-500);
+    border-radius: 50%;
+    top: 20px;
+    z-index: 1;
+  }
+  
+  &.left {
+    margin-right: auto;
+    
+    &::before {
+      right: -10px;
+    }
+    
+    @media (max-width: 768px) {
+      &::before {
+        left: -40px;
+        right: auto;
+      }
+    }
+  }
+  
+  &.right {
+    margin-left: auto;
+    
+    &::before {
+      left: -10px;
+    }
+    
+    @media (max-width: 768px) {
+      &::before {
+        left: -40px;
+      }
+    }
+  }
+  
+  .experience-content {
+    background-color: var(--bg-primary);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-3);
+    box-shadow: 0 4px 6px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px var(--shadow-color);
+    }
+    
+    .experience-header {
+      margin-bottom: var(--spacing-2);
+      
+      .role {
+        color: var(--text-primary);
+        font-size: 1.3rem;
+        margin-bottom: var(--spacing-1);
+      }
+      
+      .company {
+        color: var(--primary-600);
+        font-weight: 500;
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-1);
+      }
+      
+      .duration {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+      }
+    }
+    
+    .experience-body {
+      p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+        margin-bottom: var(--spacing-2);
+      }
+      
+      .achievements, .technologies {
+        margin-top: var(--spacing-3);
+        
+        h4 {
+          color: var(--text-primary);
+          font-size: 1rem;
+          margin-bottom: var(--spacing-1);
+        }
+      }
+      
+      .achievements {
+        ul {
+          padding-left: var(--spacing-3);
+          
+          li {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-1);
+          }
+        }
+      }
+      
+      .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-1);
+        
+        .tech-tag {
+          background-color: var(--primary-100);
+          color: var(--primary-700);
+          padding: 0.3rem 0.8rem;
+          border-radius: var(--border-radius-sm);
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}

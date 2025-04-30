@@ -1,0 +1,39 @@
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+
+  &:hover {
+    background-color: var(--gray-200);
+    transform: rotate(12deg);
+  }
+
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+
+  .icon {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    &.sun, &.moon {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

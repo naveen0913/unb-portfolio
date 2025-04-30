@@ -1,0 +1,19 @@
+<div class="project-card">
+  <div class="project-image">
+    <img [src]="imageUrl" [alt]="title">
+    <div class="project-overlay">
+      <div class="project-links">
+        <a [href]="projectUrl" target="_blank" rel="noopener" class="btn btn-sm btn-primary" *ngIf="projectUrl">View Project</a>
+        <a [href]="githubUrl" target="_blank" rel="noopener" class="btn btn-sm btn-outline" *ngIf="githubUrl">View Code</a>
+      </div>
+    </div>
+  </div>
+  <div class="project-content">
+    <h3>{{ title }}</h3>
+    <p class="project-description">{{ description }}</p>
+    <div class="project-tech">
+      <span class="tech-label">Technologies:</span>
+      <p>{{ technologies }}</p>
+    </div>
+  </div>
+</div>
