@@ -6,12 +6,22 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent } from './app/components/home/home.component';
 import { AboutComponent } from './app/components/about/about.component';
+import { ProjectCardComponent } from './app/components/project-card/project-card.component';
+import { ExperienceCardComponent } from './app/components/experience-card/experience-card.component';
+import { ContactComponent } from './app/components/contact/contact.component';
 
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'projects', component: ProjectCardComponent },
+  {
+    path:'experience',component:ExperienceCardComponent
+  },
+  {
+    path:'contact',component:ContactComponent
+  },
   { path: '**', redirectTo: '' }
 ];
 
