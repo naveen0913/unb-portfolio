@@ -10,16 +10,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ThemeService } from './services/theme.service';
 import { ExperienceCardComponent } from './components/experience-card/experience-card.component';
+import { ContactComponent } from './components/contact/contact.component';
 
-const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent },
-  { path: 'projects', component: ProjectCardComponent },
-  {
-    path:'experience',component:ExperienceCardComponent
-  },
-  { path: '**', redirectTo: '' }
-];
+
 
 @NgModule({
   declarations: [
@@ -27,7 +20,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(routes),
+    // RouterModule.forRoot(routes),
     FormsModule,
     ReactiveFormsModule
   ],

@@ -16,4 +16,8 @@ export class HomeComponent implements OnInit {
   scrollToContact(): void {
     this.router.navigate(['/contact']);
   }
+
+  scrollToProjects():void{
+    this.router.navigate(['/projects'])
+  }
 }
