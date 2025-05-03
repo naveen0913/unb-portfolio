@@ -9,6 +9,7 @@ import { AboutComponent } from './app/components/about/about.component';
 import { ProjectCardComponent } from './app/components/project-card/project-card.component';
 import { ExperienceCardComponent } from './app/components/experience-card/experience-card.component';
 import { ContactComponent } from './app/components/contact/contact.component';
+import { providePrimeNG } from 'primeng/config';
 
 
 
@@ -30,6 +31,7 @@ bootstrapApplication(AppComponent, {
     importProvidersFrom(
       BrowserAnimationsModule,
       RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })
-    )
+    ),
+    providePrimeNG({ /* options */ })
   ]
 }).catch(err => console.error(err));

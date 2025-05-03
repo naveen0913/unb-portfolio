@@ -10,13 +10,13 @@
           Passionate about creating elegant solutions to complex problems.
         </p>
         <div class="hero-cta">
-          <a (click)="scrollToProjects()" class="btn btn-primary">View Projects</a>
+          <a (click)="scrollToProjects()" class="btn btn-primary projects-btn">View Projects</a>
           <button (click)="scrollToContact()"  class="btn btn-outline">Contact Me</button>
         </div>
       </div>
       <div class="hero-image" data-aos="fade-left">
         <div class="image-container">
-          <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="Naveen Udayagiri">
+          <img src="https://avatars.githubusercontent.com/u/136116172?s=400&u=c4daf28ae04c3fbe245f04d2eb448301c0c5b30d&v=4" alt="Naveen Udayagiri">
         </div>
       </div>
     </div>
@@ -37,14 +37,14 @@
           <i class="fas fa-code"></i>
         </div>
         <h3>Frontend Development</h3>
-        <p>Creating responsive and interactive user interfaces with React, Angular, and modern JavaScript.</p>
+        <p>Creating responsive and interactive user interfaces with  Angular and modern JavaScript.</p>
       </div>
       <div class="skill-card">
         <div class="skill-icon">
           <i class="fas fa-server"></i>
         </div>
         <h3>Backend Development</h3>
-        <p>Building robust APIs and server-side applications with Node.js and related frameworks.</p>
+        <p>Building robust APIs and server-side applications with Java, Spring Boot and related frameworks.</p>
       </div>
       <div class="skill-card">
         <div class="skill-icon">
@@ -62,12 +62,12 @@
     <h2 class="section-title">Featured Projects</h2>
     <div class="project-grid">
       <app-project-card 
-        title="Table Booking App" 
-        description="A responsive web application for restaurant table reservations with real-time availability."
-        imageUrl="https://images.pexels.com/photos/6267/menu-restaurant-vintage-table.jpg"
-        technologies="React, Node.js, MongoDB"
-        projectUrl="https://table-booking-app-kappa.vercel.app/"
-        githubUrl="https://github.com/naveen0913">
+        title="Food Delivery App" 
+        description="Pickmybox is a dynamic food delivery service that specializes in transporting meals from home kitchens directly to schools."
+        imageUrl="https://pickmybox.in/assets/images/logo-removebg.png"
+        technologies="Angular, Typescript, Bootstrap, Angular-Material, PrimeNg, Php, MySQL and Git"
+        projectUrl="https://pickmybox.in"
+        githubUrl="https://github.com/pparimi89/pickmybox_app">
       </app-project-card>
       
       <app-project-card 
@@ -80,7 +80,7 @@
       </app-project-card>
     </div>
     <div class="view-all">
-      <a routerLink="/projects" class="btn btn-outline">View All Projects</a>
+      <a routerLink="/projects" (click)="scrollToProjects()" class="btn btn-outline">View All Projects</a>
     </div>
   </div>
 </section>
@@ -94,7 +94,7 @@
       
     </div>
     <div class="view-all">
-      <a routerLink="/experience" class="btn btn-outline">View Full Experience</a>
+      <a (click)="scrollToExperience()" class="btn btn-outline">View Full Experience</a>
     </div>
   </div>
 </section>
@@ -104,7 +104,7 @@
     <div class="cta-content">
       <h2>Let's Work Together</h2>
       <p>Interested in collaborating or have a project in mind? I'd love to hear from you!</p>
-      <a routerLink="/contact" class="btn btn-primary">Get In Touch</a>
+      <a (click)="scrollToContact()" class="btn btn-primary">Get In Touch</a>
     </div>
   </div>
 </section>

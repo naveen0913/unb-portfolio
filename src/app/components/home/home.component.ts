@@ -20,4 +20,9 @@ export class HomeComponent implements OnInit {
   scrollToProjects():void{
     this.router.navigate(['/projects'])
   }
+
+  scrollToExperience():void{
+    this.router.navigate(['/experience'])
+  }
+
 }
