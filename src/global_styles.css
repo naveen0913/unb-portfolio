@@ -256,3 +256,24 @@ a:hover {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+
+.projects-btn:hover{
+  color: white;
+}
+
+/* common style code  */
+.about-hero {
+  background-color: var(--primary-600);
+  color: white;
+  padding: 80px 0 80px;
+  text-align: center;
+  
+  .page-title {
+    font-size: 3rem;
+    margin: 0;
+    
+    @media (max-width: 576px) {
+      font-size: 2.5rem;
+    }
+  }
+}

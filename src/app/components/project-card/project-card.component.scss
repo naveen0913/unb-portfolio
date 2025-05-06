@@ -7,6 +7,9 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  width:75%;
+  margin: auto;
+  margin-top: 20px;
   
   &:hover {
     transform: translateY(-5px);
@@ -58,7 +61,6 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    
     h3 {
       color: var(--text-primary);
       margin-bottom: var(--spacing-2);

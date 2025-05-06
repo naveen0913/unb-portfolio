@@ -3,12 +3,13 @@ import { ThemeService } from './services/theme.service';
 import { HeaderComponent } from "./components/header/header.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { RouterModule } from '@angular/router';
+import { ScrollTopComponent } from "./components/scroll-top/scroll-top.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  imports: [HeaderComponent, FooterComponent,RouterModule]
+  imports: [HeaderComponent, FooterComponent, RouterModule, ScrollTopComponent]
 })
 export class AppComponent implements OnInit { 
   title = 'Naveen Udayagiri - Portfolio';

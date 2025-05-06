@@ -8,14 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
   imports:[CommonModule]
 })
 export class ProjectCardComponent implements OnInit{
-  @Input() title: string = '';
-  @Input() description: string = '';
-  @Input() imageUrl: string = '';
-  @Input() technologies: string = '';
-  @Input() projectUrl: string = '';
-  @Input() githubUrl: string = '';
+  
 
-  projects = [
+  allProjects = [
+    {
+      title: 'Food Delivery System (Pickmybox)',
+      description: 'A dynamic food delivery platform transporting meals from home kitchens to schools.',
+      imageUrl: 'https://pickmybox.in/assets/images/logo-removebg.png',
+      technologies: 'Angular, TypeScript, Bootstrap, Angular Material, PrimeNG, PHP, MySQL, Git',
+      projectUrl: 'https://pickmybox-live.example.com',
+      githubUrl: 'https://github.com/yourusername/pickmybox'
+    },
     {
       title: 'E-Commerce Web Application',
       description: 'A full-stack online shopping platform with product management, cart, and secure checkout.',
@@ -24,14 +27,7 @@ export class ProjectCardComponent implements OnInit{
       projectUrl: 'https://ecommerce-live-demo.example.com',
       githubUrl: 'https://github.com/yourusername/ecommerce-frontend'
     },
-    {
-      title: 'Food Delivery System (Pickmybox)',
-      description: 'A dynamic food delivery platform transporting meals from home kitchens to schools.',
-      imageUrl: 'assets/images/pickmybox.jpg',
-      technologies: 'Angular, TypeScript, Bootstrap, Angular Material, PrimeNG, PHP, MySQL, Git',
-      projectUrl: 'https://pickmybox-live.example.com',
-      githubUrl: 'https://github.com/yourusername/pickmybox'
-    },
+    
     {
       title: 'Table Reservation System',
       description: 'An online platform for reserving tables at restaurants with real-time availability tracking.',

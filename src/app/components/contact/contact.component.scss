@@ -1,0 +1,71 @@
+.contact-section {
+    padding: var(--spacing-6) 0;
+    background-color: var(--bg-primary);
+  
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 var(--spacing-3);
+    }
+  
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--primary-700);
+      margin-bottom: var(--spacing-2);
+    }
+  
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-secondary);
+      margin-bottom: var(--spacing-4);
+    }
+  
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-3);
+  
+      .form-group {
+        display: flex;
+        flex-direction: column;
+  
+        label {
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+          color: var(--primary-600);
+        }
+  
+        input,
+        textarea {
+          padding: 10px 14px;
+          border: 1px solid var(--primary-200);
+          border-radius: 6px;
+          font-size: 1rem;
+          outline: none;
+          transition: border-color 0.3s;
+  
+          &:focus {
+            border-color: var(--primary-500);
+          }
+        }
+      }
+  
+      .btn-primary {
+        align-self: flex-start;
+        padding: 10px 20px;
+        font-weight: 600;
+        color: #fff;
+        background-color: var(--primary-600);
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: var(--primary-700);
+        }
+      }
+    }
+  }
+  

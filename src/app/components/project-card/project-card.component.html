@@ -1,19 +1,25 @@
-<div class="project-card">
+<section class="about-hero">
+  <div class="container">
+    <h1 class="page-title" data-aos="fade-down">Projects</h1>
+  </div>
+</section>
+
+<div class="project-card" *ngFor="let project of allProjects">
   <div class="project-image">
-    <img [src]="imageUrl" [alt]="title">
+    <img [src]="project.imageUrl" [alt]="project.title">
     <div class="project-overlay">
       <div class="project-links">
-        <a [href]="projectUrl" target="_blank" rel="noopener" class="btn btn-sm btn-primary" >View Project</a>
-        <a [href]="githubUrl" target="_blank" rel="noopener" class="btn btn-sm btn-outline">View Code</a>
+        <a [href]="project.projectUrl" target="_blank" rel="noopener" class="btn btn-sm btn-primary projects-btn" >View Project</a>
+        <a [href]="project.githubUrl" target="_blank" rel="noopener" class="btn btn-sm btn-outline">View Code</a>
       </div>
     </div>
   </div>
   <div class="project-content">
-    <h3>{{ title }}</h3>
-    <p class="project-description">{{ description }}</p>
+    <h3>{{ project.title }}</h3>
+    <p class="project-description">{{ project.description }}</p>
     <div class="project-tech">
       <span class="tech-label">Technologies:</span>
-      <p>{{ technologies }}</p>
+      <p>{{ project.technologies }}</p>
     </div>
   </div>
 </div>
