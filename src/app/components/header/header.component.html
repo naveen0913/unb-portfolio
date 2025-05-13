@@ -4,10 +4,11 @@
       <a routerLink="/" class="logo">
         <h1>Naveen Udayagiri<span>.</span></h1>
       </a>
-      
+
       <nav>
         <ul [ngClass]="{'show': menuOpen}">
-          <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a></li>
+          <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+              (click)="closeMenu()">Home</a></li>
           <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
           <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
           <li><a routerLink="/experience" routerLinkActive="active" (click)="closeMenu()">Experience</a></li>
@@ -17,12 +18,16 @@
           </li>
         </ul>
       </nav>
-      
+
       <div class="mobile-controls">
         <app-theme-toggle></app-theme-toggle>
-        <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">
-          <span [ngClass]="{'open': menuOpen}"></span>
-        </button>
+        <div class="menu-toggle" (click)="toggleMenu()" [ngClass]="{'open': menuOpen}" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+
       </div>
     </div>
   </div>

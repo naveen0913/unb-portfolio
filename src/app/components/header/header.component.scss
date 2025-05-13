@@ -105,86 +105,36 @@ header {
     }
 
     .menu-toggle {
-      display: block;
-      background: none;
-      border: none;
-      width: 30px;
-      height: 30px;
-      position: relative;
-      cursor: pointer;
-
-      span {
-        display: block;
-        position: absolute;
-        height: 2px;
-        width: 100%;
-        background: var(--text-primary);
-        border-radius: 9px;
-        opacity: 1;
-        left: 0;
-        transform: rotate(0deg);
-        transition: 0.25s ease-in-out;
-
-        &:nth-child(1) {
-          top: 8px;
+      display: none;
+    
+      @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 25px;
+        height: 16.4px;
+        background: none;
+        border: none;
+        cursor: pointer;
+    
+        span {
+          display: block;
+          height: 2px;
+          width: 100%;
+          background-color: var(--text-primary);
+          transition: all 0.3s ease;
         }
-
-        &:nth-child(2), &:nth-child(3) {
-          top: 16px;
+    
+        &.open span:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
         }
-
-        &:nth-child(4) {
-          top: 24px;
+    
+        &.open span:nth-child(2) {
+          opacity: 0;
         }
-
-        &.open {
-          &:nth-child(1) {
-            top: 18px;
-            width: 0%;
-            left: 50%;
-          }
-
-          &:nth-child(2) {
-            transform: rotate(45deg);
-          }
-
-          &:nth-child(3) {
-            transform: rotate(-45deg);
-          }
-
-          &:nth-child(4) {
-            top: 18px;
-            width: 0%;
-            left: 50%;
-          }
-        }
-      }
-
-      &::before, &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        background-color: var(--text-primary);
-        border-radius: 9px;
-        transition: all 0.3s ease;
-      }
-
-      &::before {
-        top: 0;
-      }
-
-      &::after {
-        bottom: 0;
-      }
-
-      &.open {
-        &::before {
-          transform: rotate(45deg) translate(7px, 7px);
-        }
-
-        &::after {
-          transform: rotate(-45deg) translate(7px, -7px);
+    
+        &.open span:nth-child(3) {
+          transform: rotate(-45deg) translate(5px, -5px);
         }
       }
     }
